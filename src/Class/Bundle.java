@@ -1,21 +1,20 @@
 package Class;
 
-import Interface.Title;
+import Interface.Storage;
 
-public class Bundle implements Title {
+public class Bundle implements Storage {
     private Titles title = Titles.Cheese;
 
-    public String get_inside(){
+    public String getInside(){
         return "В свертке оказалась ";
     }
-    @Override
-    public String get_who_make(){
+
+    public String getWhoMake(){
         return "их сделала мама";
     }
-    @Override
-    public String show_title(){
+    public String keep(){
         if (equals(1)) {
-            title = Titles.Only_cheese;
+            title = Titles.Only_butter;
             return "\"С сыром\"";
         }
         else if (equals(2)) {
@@ -44,7 +43,7 @@ public class Bundle implements Title {
     @Override
     public int hashCode() {
         if (title == Titles.Cheese) return 1;
-        else if (title == Titles.Only_cheese) return 2;
+        else if (title == Titles.Only_butter) return 2;
         else if (title == Titles.Expensive_sausage) return 3;
         else if (title == Titles.Good_morning) return 4;
         else return 0;
